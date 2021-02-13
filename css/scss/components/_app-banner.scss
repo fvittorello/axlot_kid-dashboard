@@ -1,0 +1,130 @@
+.header {
+	width: 100%;
+	height: 84px;
+	background: $color-orange-soft;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 42px 10px 22px 10px;
+	position: sticky;
+	top: 0;
+	z-index: 3;
+	box-shadow: 0px 3px 3px $color-black-transparent;
+
+	&__left-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.menu-button {
+	background: transparent;
+	border-radius: 50%;
+	border: none;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background 0.3s;
+
+	&:hover {
+		background: $color-black-transparent;
+	}
+
+	&-secondary {
+		position: relative;
+		&:hover {
+			background: $color-black-transparent;
+		}
+	}
+}
+
+.bar-icon {
+	display: block;
+	height: 2px;
+	width: 18px;
+	position: relative;
+	background: $color-white-primary;
+	transition: all ease;
+
+	&::before,
+	&::after {
+		content: '';
+		height: 2px;
+		width: 18px;
+		background: $color-white-primary;
+		position: absolute;
+		left: 0;
+		transition: transform ease 0.3s;
+	}
+
+	&::before {
+		transform: rotate(0deg);
+		bottom: 5px;
+	}
+
+	&::after {
+		transform: rotate(0deg);
+		top: 5px;
+	}
+
+	&.bar-icon--checked {
+		visibility: hidden;
+
+		&::before {
+			visibility: visible;
+			transform: rotate(45deg);
+			bottom: 0;
+		}
+
+		&::after {
+			visibility: visible;
+			transform: rotate(-45deg);
+			top: 0;
+		}
+	}
+}
+
+.page-title {
+	text-transform: uppercase;
+	color: $color-white-secondary;
+	font-family: $roboto;
+	font-weight: 500;
+	font-size: 20px;
+	margin-left: 34px;
+}
+
+.vertical-elipsis {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	height: 4px;
+	width: 4px;
+	border-radius: 100%;
+	background: $color-white-primary;
+
+	&::before,
+	&::after {
+		content: '';
+		height: 4px;
+		width: 4px;
+		border-radius: 100%;
+		background: $color-white-primary;
+		position: absolute;
+		left: 0;
+		transition: all ease 0.3s;
+	}
+
+	&::before {
+		bottom: 6px;
+	}
+
+	&::after {
+		top: 6px;
+	}
+}

@@ -1,0 +1,23 @@
+//  This its only a template to view the app or website according to the mockup given
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: $color-white-secondary;
+}
+
+.fake-screen-container {
+	height: 671px;
+	width: 364px;
+	border: solid 2px $color-grey-soft;
+	box-sizing: content-box;
+
+	overflow-y: scroll;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}

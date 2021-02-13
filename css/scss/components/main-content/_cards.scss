@@ -1,0 +1,105 @@
+.card {
+	width: 100%;
+	height: 76px;
+	display: flex;
+	align-items: center;
+	margin-top: 19px;
+	background: $color-white-primary;
+	box-shadow: 0px 3px 6px $color-black-transparent;
+	border-radius: 6px;
+	position: relative;
+
+	&__icon-container {
+		height: 53px;
+		width: 53px;
+		margin-left: 20px;
+		position: relative;
+		border-radius: 100%;
+		background: linear-gradient(180deg, $color-orange-soft, $color-orange-strong);
+	}
+
+	&__icon {
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&__text-container {
+		margin-left: 23px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		font-family: $open-sans;
+		font-weight: 400;
+		font-size: 18px;
+		color: $color-orange-soft;
+	}
+
+	&__subtitle {
+		font-family: $open-sans;
+		font-weight: 400;
+		font-size: 11px;
+		color: $color-grey-strong;
+		text-transform: uppercase;
+	}
+
+	&__checkbox {
+		height: 25px;
+		width: 25px;
+		border: solid 2px $color-grey-mid;
+		border-radius: 5px;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+
+		&:hover {
+			background: $color-grey-mid url(../assets/images/check.svg) center no-repeat;
+			transition: background-color 0.3s;
+		}
+
+		&-input {
+			height: 21px;
+			width: 21px;
+			position: absolute;
+			top: 12px;
+			right: 12px;
+
+			&:checked {
+				& ~ .card__checkbox {
+					border: solid 2px $color-orange-soft;
+					background: $color-orange-soft url(../assets/images/check.svg) center no-repeat;
+					transition: border 0.3s, background-color 0.3s;
+				}
+
+				& ~ .card__icon-container {
+					background: $color-grey-strong;
+				}
+
+				& ~ .card__text-container > .card__title {
+					color: $color-grey-strong;
+				}
+			}
+		}
+	}
+}
+
+.icon {
+	&-bathroom {
+		width: 21px;
+		height: 24px;
+		margin-left: 1px;
+	}
+
+	&-paw {
+		width: 25px;
+		height: 21px;
+	}
+
+	&-sofa {
+		width: 32px;
+		height: 17px;
+	}
+}

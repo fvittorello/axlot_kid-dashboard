@@ -1,0 +1,45 @@
+//	Parcial and Total Counters
+
+.summary {
+	width: 100%;
+	margin-top: 16px;
+}
+
+.counter {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	font-family: $roboto;
+	text-transform: uppercase;
+}
+
+.total {
+	margin-top: 7px;
+
+	&__title {
+		font-weight: 400;
+		font-size: 14px;
+		color: $color-grey-strong;
+	}
+
+	&__count {
+		font-weight: 400;
+		font-size: 14px;
+		color: $color-grey-strong;
+	}
+}
+
+.week {
+	&__title {
+		font-weight: 500;
+		font-size: 14px;
+		color: $color-orange-soft;
+	}
+
+	&__count {
+		font-weight: 500;
+		font-size: 18px;
+		color: $color-orange-soft;
+	}
+}

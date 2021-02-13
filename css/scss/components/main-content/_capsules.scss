@@ -1,0 +1,56 @@
+.tasks {
+	margin-top: 42px;
+}
+
+.capsules {
+	display: flex;
+	align-items: center;
+	border: none;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.selector {
+	&-radio--left:checked ~ &-button--left,
+	&-radio--middle:checked ~ &-button--middle,
+	&-radio--right:checked ~ &-button--right {
+		background: linear-gradient(180deg, $color-orange-soft, $color-orange-strong);
+		color: $color-white-secondary;
+		font-family: $open-sans;
+	}
+
+	&-button {
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover,
+		&:focus {
+			color: $color-white-secondary;
+			font-family: $open-sans;
+			background: $color-orange-soft;
+			transition: background 0.3s;
+		}
+
+		&--left,
+		&--middle,
+		&--right {
+			height: 34px;
+			width: 33.3%;
+			line-height: 34px;
+			text-align: center;
+			font-family: $roboto;
+			color: $color-grey-strong;
+			background: $color-grey-soft;
+		}
+
+		&--left {
+			border-radius: 17px 0 0 17px;
+		}
+
+		&--right {
+			border-radius: 0 17px 17px 0;
+		}
+	}
+}
